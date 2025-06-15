@@ -60,9 +60,9 @@ This is a simple backend application built with Spring Boot that supports user r
 **Body:**
 ```json
 {
-  "fullName": "Vibin",
-  "email": "vibin@example.com",
-  "password": "vibin123"
+  "fullName": "kaithamalai",
+  "email": "kaithamalai@example.com",
+  "password": "zxcvbhnjm123"
 }
 
 2️⃣ Login
@@ -70,8 +70,8 @@ Endpoint: POST /api/auth/login
 Body:
 json
 {
-  "email": "vibin@example.com",
-  "password": "vibin123"
+  "email": "kaithamalai@example.com",
+  "password": "zxcvbhnjm123"
 }
 
 Response:
@@ -85,7 +85,7 @@ Endpoint: GET /api/user/me
 Headers:
 Authorization: Bearer <paste-your-token-here>
 Response:
-"Hello, vibin@example.com! This is a protected endpoint."
+"Hello, kaithamalai@example.com! This is a protected endpoint."
 
 🛠️ Setup Instructions
 Clone the repo
