@@ -18,10 +18,8 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Map<String, String>> handleValidationErrors(MethodArgumentNotValidException ex) {
         Map<String, String> errors = new LinkedHashMap<>();
 
-        // Enforce desired order manually
         List<String> fieldOrder = List.of("fullName", "email", "password");
 
-        // First, go through the known field order
         for (String fieldName : fieldOrder) {
             ex.getBindingResult().getFieldErrors().stream()
                     .filter(error -> error.getField().equals(fieldName))

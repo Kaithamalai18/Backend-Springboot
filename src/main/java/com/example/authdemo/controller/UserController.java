@@ -31,6 +31,4 @@ public class UserController {
         String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         return "Hello, " + email + "! This is a protected endpoint.";
     }
-
-
 }

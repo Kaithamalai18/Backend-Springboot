@@ -42,8 +42,9 @@ public class UserService {
     public String loginUser(LoginRequest request) {
         Optional<User> userOptional = userRepository.findByEmail(request.getEmail());
 
+        // Check if user exists
         if (userOptional.isEmpty()) {
-            throw new RuntimeException("Invalid email");
+            return "Error: User does not exist.";
         }
 
         User user = userOptional.get();
@@ -52,7 +53,7 @@ public class UserService {
             throw new RuntimeException("Invalid password");
         }
 
-        // 🪪 Generate JWT Token
+        // Generate JWT Token
         String token = jwtUtil.generateToken(user.getEmail());
 
         return "Login successful. Your token: " + token;
